@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لعبة فرز النفايات</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div id="home-screen" class="screen">
+        <div class="screen-content floating">
+            <h2>🎮 لعبة فرز النفايات 🎮</h2>
+            <p>انضم إلى المغامرة! نظف العالم وجمع النفايات وضعها في الحاويات المناسبة</p>
+            <div class="button-group">
+                <button id="start-button">🚀 ابدأ اللعبة</button>
+                <button id="learn-button" class="secondary">📚 تعلم</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="learn-screen" class="screen" style="display: none;">
+        <div class="screen-content">
+            <h2>🌍 فوائد النظافة</h2>
+            <div style="text-align: right; line-height: 2.5; font-size: 18px;">
+                <div>✅ حماية البيئة والكائنات الحية</div>
+                <div>✅ صحة أفضل للجميع</div>
+                <div>✅ جمال الحي والطبيعة</div>
+                <div>✅ تقليل التلوث والأمراض</div>
+                <div>♻️ يحافظ على نظافة البيئة </div>
+                <div>🌱 يساعد على إعادة التدوير </div>
+                <div>🐬 يحمي الحيوانات والبحر من البلاستيك  </div>
+                <div>🏫 يجعل المدرسة والمدينة أنظف </div>
+                <div>✅ توفير الموارد الطبيعية</div>
+            </div>
+            <button id="close-learn-button">العودة</button>
+            <button id="close-learn-button"><a href="indexx.html">المزيد</a></button>
+        </div>
+    </div>
+
+    <div id="game-screen">
+        <div id="game-header">
+            <div class="score-container">
+                <div class="score-box">
+                    <h3>📍 المرحلة</h3>
+                    <div id="stage-value" class="score-value">المدرسة</div>
+                </div>
+                <div class="score-box">
+                    <h3>⭐ النقاط</h3>
+                    <div id="score-value" class="score-value">0</div>
+                </div>
+                <div class="score-box">
+                    <h3>🏆 أفضل نتيجة</h3>
+                    <div id="best-score-value" class="score-value">0</div>
+                </div>
+                <div class="score-box">
+                    <h3>⏱️ الوقت</h3>
+                    <div id="time-value" class="score-value">120</div>
+                </div>
+            </div>
+            <div>
+                <button id="reset-button">🔄 إعادة</button>
+            </div>
+              <div id="command-message" class="command-message">
+             🎯 استخدم الجويستيك للتحرك وزر الإسقاط
+            </div>
+        </div>
+        <div id="game-container">
+           
+            <div class="progress-bar">
+                <div id="progress-fill" class="progress-fill"></div>
+            </div>
+           
+            
+            <div id="points-message" class="points-message"></div>
+            
+            <canvas id="game-canvas"></canvas>
+        
+            <div class="controls-container">
+                <button id="drop-button">📦 إسقاط</button>
+                <div id="joystick-container">
+                    <div id="joystick-background">
+                        <div id="joystick-knob"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="win-screen" class="screen" style="display: none;">
+        <div class="screen-content floating">
+            <h2>🎉 أحسنت! أكملت جميع المراحل 🎉</h2>
+            <p id="final-score" style="font-size: 24px; margin: 20px 0;">⭐ النقاط: 0</p>
+            <button id="play-again-button">🔄 العب مرة أخرى</button>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
